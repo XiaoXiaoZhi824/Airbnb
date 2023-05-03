@@ -6,11 +6,12 @@ module.exports = {
   webpack: {
     alias: {
       '@': resolve('src'),
-      'assets': resolve('assets'),
-      'services': resolve('services'),
-      'components': resolve('components'),
-      'hooks': resolve('hooks'),
-      'utils': resolve('utils')
+      'assets': resolve('src/assets'),
+      'services': resolve('src/services'),
+      'components': resolve('src/components'),
+      'hooks': resolve('src/hooks'),
+      'utils': resolve('src/utils'),
+      '@mui/styled-engine': '@mui/styled-engine-sc'
     }
   },
   plugins: [
