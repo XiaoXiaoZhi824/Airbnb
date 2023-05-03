@@ -19,6 +19,64 @@ export const GoodsItemWrapper = styled.section`
         top: 0;
         width: 100%;
         height: 100%;
+        object-fit: cover;
+      }
+    }
+    .slider {
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        .control {
+          display: flex;
+        }
+      }
+      .control {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        display: none;
+        justify-content: space-between;
+        align-items: flex-start;
+        color: #fff;
+        .btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 83px;
+          height: 100%;
+          background: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
+          &.right {
+            background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
+          }
+        }
+      }
+      .indicator {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        z-index: 9;
+        margin: 0 auto;
+        width: 30%;
+        .item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 20%;
+          .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #fff;
+            &.active {
+              width: 8px;
+              height: 8px;
+            }
+          }
+        }
       }
     }
     .desc {

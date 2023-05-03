@@ -1,11 +1,17 @@
 import React, { memo } from 'react';
+import { useSelector, shallowEqual } from 'react-redux';
+import { DetailWrapper } from './style';
+import Pictures from './components/Pictures';
 
-const App = memo(() => {
+const Detail = memo(() => {
+  const { goodsInfo } = useSelector(state => ({
+    goodsInfo: state.detail.goodsInfo
+  }), shallowEqual);
   return (
-    <section>
-      <h1>Detail...</h1>
-    </section>
+    <DetailWrapper>
+      <Pictures pictureUrls={goodsInfo.picture_urls} />
+    </DetailWrapper>
   );
 });
 
-export default App;
+export default Detail;
