@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const FilterWrapper = styled.section`
-  /* position: fixed;
+  position: fixed;
   top: 80px;
   left: 0;
   right: 0;
-  z-index: 9; */
+  z-index: 9;
   display: flex;
   justify-content: flex-start;
   align-items: center;

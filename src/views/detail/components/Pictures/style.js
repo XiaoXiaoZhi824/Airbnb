@@ -66,7 +66,7 @@ export const PicturesWrapper = styled.section`
       }
     }
   }
-  .show-btn {
+  .see_pictures {
     position: absolute;
     bottom: 15px;
     right: 15px;

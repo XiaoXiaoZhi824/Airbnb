@@ -12,13 +12,13 @@ const GoodsItem = memo((props) => {
   const CarouselRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
   function controlClick(e, isNext = true) {
-    e.nativeEvent.stopImmediatePropagation();
     if(isNext) CarouselRef.current.next();
     else CarouselRef.current.prev();
     let newCurrnetIndex = isNext ? currentIndex + 1 : currentIndex - 1;
     if(newCurrnetIndex < 0) newCurrnetIndex = goodsData.picture_urls.length - 1;
     if(newCurrnetIndex > goodsData.picture_urls.length - 1) newCurrnetIndex = 0;
     setCurrentIndex(newCurrnetIndex);
+    e.stopPropagation();
   }
   function goodsItemClick() {
     if (seeGoodsInfo) seeGoodsInfo(goodsData);

@@ -5,7 +5,7 @@ export const RightWrapper = styled.section`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: ${props => props.theme.text.primaryColor};
+  color: ${props => props.theme.isAlpha ? '#fff': '#484848'};
   font-weight: 600;
   .operation {
     box-sizing: content-box;
@@ -18,7 +18,7 @@ export const RightWrapper = styled.section`
       line-height: 18px;
       cursor: pointer;
       &:hover {
-        background-color: #f5f5f5;
+        background-color: ${props => props.theme.isAlpha ? 'rgba(255,255,255,.1)': '#f5f5f5'};
       }
     }
   }

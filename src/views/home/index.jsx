@@ -2,6 +2,7 @@ import React, { memo, useEffect } from 'react';
 import { HomeWrapper } from './style';
 import Banner from './components/banner/indfex';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
+import { updateHeaderConfig } from '@/store/modules/main';
 import { fetchHomeData } from '@/store/modules/home';
 import { isEmptyObj } from 'utils/isEmptyObj';
 import SectionV1 from './components/section-v1';
@@ -13,6 +14,10 @@ const App = memo(() => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchHomeData());
+    dispatch(updateHeaderConfig({
+      isFixed: true,
+      topAlpha: true
+    }));
   }, [dispatch]);
   const { discountInfo, recommenddestInfo, goodPriceInfo, highScoreInfo, longforInfo, plusInfo } = useSelector(state => ({
     discountInfo: state.home.discountInfo,

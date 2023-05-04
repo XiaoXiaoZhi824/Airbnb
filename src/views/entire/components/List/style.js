@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const ListWrapper = styled.section`
   position: relative;
+  margin-top: 128px;
   padding: 30px 20px;
   .title {
     margin: 0 0 10px 10px;
