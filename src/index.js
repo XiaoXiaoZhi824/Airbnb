@@ -22,4 +22,3 @@ root.render(
     </Suspense>
   </Provider>
 );
-console.log('-------');
