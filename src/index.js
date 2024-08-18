@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import 'normalize.css';
 import './assets/css/base.less';
-import { ThemeProvider } from 'styled-components'
-import theme from 'assets/theme'
+import { ThemeProvider } from 'styled-components';
+import theme from 'assets/theme';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
@@ -16,9 +16,10 @@ root.render(
     <Suspense fallback="loading">
       <ThemeProvider theme={theme}>
         <HashRouter>
-          <App/>
+          <App />
         </HashRouter>
       </ThemeProvider>
     </Suspense>
   </Provider>
 );
+console.log('-------');
